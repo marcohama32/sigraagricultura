@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-app: #e6f1ec;
+  --bg-sidebar: #337a64;
+  --bg-card: #ffffff;
+  --text-main: #333333;
+  --text-muted: #888888;
+  --text-sidebar: #e0f0ea;
+  --text-sidebar-active: #ffffff;
+  --accent-green: #337a64;
+  --accent-light-green: #bce3d2;
+  --accent-orange: #f5a623;
+  --accent-purple: #8b5cf6;
+  --accent-blue: #3b82f6;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --sidebar-width: 260px;
+  --header-height: 64px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+ul { list-style: none; }
+a  { text-decoration: none; color: inherit; }
+/* Touch-friendly tap targets — only for explicit interactive elements */
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background-color: rgba(148, 163, 184, 0.4); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background-color: rgba(100, 116, 139, 0.7); }
+* { scrollbar-width: thin; scrollbar-color: rgba(148, 163, 184, 0.4) transparent; }
+
+/* Responsive utilities */
+.hide-mobile  { display: none !important; }
+.hide-desktop { display: flex !important; }
+
+@media (min-width: 768px) {
+  .hide-mobile  { display: flex !important; }
+  .hide-desktop { display: none !important; }
+}
+
+/* Overlay for mobile drawer */
+.sidebar-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+  z-index: 99; backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
