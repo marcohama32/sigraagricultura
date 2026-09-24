@@ -76,7 +76,6 @@ const errors = ref<Record<string, string>>({})
 
 // Anexos local state
 const anexosList = ref<PolicyAnexo[]>([])
-const newAnexoNome = ref('')
 
 // Provincias as array
 const selectedProvincias = ref<string[]>([])
@@ -125,6 +124,13 @@ function open() {
       estado_monitoria: props.policy.estado_monitoria || 'Em Curso',
       ultima_revisao: props.policy.ultima_revisao || '',
       proxima_revisao: props.policy.proxima_revisao || '',
+      quadro_logico: props.policy.quadro_logico || '',
+      fonte_verificacao: props.policy.fonte_verificacao || '',
+      frequencia_monitoria: props.policy.frequencia_monitoria || 'Trimestral',
+      responsavel_ma: props.policy.responsavel_ma || '',
+      orcamento_ma: props.policy.orcamento_ma || '',
+      riscos_mitigacao: props.policy.riscos_mitigacao || '',
+      licoes_aprendidas: props.policy.licoes_aprendidas || '',
       parceiros: props.policy.parceiros || '',
       anexos: props.policy.anexos || '[]',
     }

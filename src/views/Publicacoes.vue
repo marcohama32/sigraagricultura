@@ -102,6 +102,8 @@ async function remove(id: string) {
 }
 
 // ── Helpers ─────────────────────────────────────────────────
+function openLink(url: string) { window.open(url, '_blank') }
+
 function statusColor(s: StatusPublicacao): string {
   return ({ 'Publicado':'#16a34a','Rascunho':'#6b7280','Em Revisão':'#d97706','Arquivado':'#9ca3af' } as any)[s] ?? '#6b7280'
 }
@@ -298,7 +300,7 @@ const AREAS_TEMATICAS = [
             <span v-if="p.area_tematica" class="pc-meta-item"><Globe :size="13" /> {{ p.area_tematica }}</span>
           </div>
           <div class="form-actions" style="padding:0;margin-top:4px">
-            <button v-if="p.link_documento" class="btn-cancel" @click="window.open(p.link_documento,'_blank')"><ExternalLink :size="14" /> Abrir</button>
+            <button v-if="p.link_documento" class="btn-cancel" @click="openLink(p.link_documento)"><ExternalLink :size="14" /> Abrir</button>
             <button class="btn-cancel" @click="openEdit(p)"><Pencil :size="14" /> Editar</button>
             <button class="btn-danger" @click="remove(p.id)"><Trash2 :size="14" /> Eliminar</button>
           </div>

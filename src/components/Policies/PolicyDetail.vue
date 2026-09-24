@@ -3,7 +3,7 @@ import type { Policy, PolicyAnexo } from '../../lib/policies'
 import PolicyBadge from './PolicyBadge.vue'
 import {
   X, Trash2, Pencil, Calendar, Clock, Link as LinkIcon, User,
-  AlignLeft, Target, MapPin, Users, BarChart2, Paperclip, CheckCircle
+  AlignLeft, Target, MapPin, Users, Paperclip, CheckCircle
 } from 'lucide-vue-next'
 import { computed } from 'vue'
 

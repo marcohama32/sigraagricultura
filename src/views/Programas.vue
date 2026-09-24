@@ -10,7 +10,7 @@ import {
   FolderKanban, Plus, Search, X,
   Clock, CheckCircle2, AlertTriangle, TrendingUp, Pencil, Trash2,
   DollarSign, MapPin, Users, Calendar, Building2, BarChart2,
-  FileText, Save, Loader2, Paperclip
+  FileText, Save, Loader2
 } from 'lucide-vue-next'
 
 // ── State ───────────────────────────────────────────────────
